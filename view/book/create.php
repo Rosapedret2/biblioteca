@@ -8,13 +8,13 @@
 </head>
 
 <?php
-    require_once("/Applications/MAMP/htdocs/biblioteca/view/head/header.php");
+    require_once("biblioteca/controller/BookController.php");
 ?>
 
  
   <div class="form-container">
     <h1>Agregar Libro</h1>
-    <form action="procesar_formulario.php" method="post" enctype="multipart/form-data">
+    <form action="biblioteca/controller/BookController.php" method="post" enctype="multipart/form-data">
       <div class="form-group">
         <label for="titulo">Título del Libro:</label>
         <input type="text" id="titulo" name="titulo" required>
@@ -31,8 +31,8 @@
       </div>
 
       <div class="form-group">
-        <label for="isbm">ISBM:</label>
-        <input type="text" id="isbm" name="isbm" required>
+        <label for="isbn">ISBN:</label>
+        <input type="text" id="isbn" name="isbn" required>
       </div>
 
       <div class="form-group">
@@ -47,7 +47,6 @@
     </form>
   </div>
 
-
 <?php
-    require_once("c://xampp/htdocs/biblioteca/view/head/footer.php");
+    require_once("ruta/del/proyecto/view/head/footer.php");
 ?>

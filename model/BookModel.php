@@ -5,33 +5,49 @@
         {
             require_once("/Applications/MAMP/htdocs/biblioteca/config/DataBase.php");
             $con = new DataBase();
-            $this->PDO = $con->conection();
+            $this->PDO = $con->conexion();
         }
-        public function insert($title){
-            $stament = $this->PDO->prepare("INSERT INTO titulo VALUES(null,:title)");
-            $stament->bindParam(":title",$title);
+    
+        public function insertar($nombre, $isbn, $titulo, $autor, $descripcion, $imagen)
+        {
+            $stament = $this->PDO->prepare("INSERT INTO Books_library (Autor, Título, ISBN, Descripción, Imagen) VALUES (:autor, :titulo, :isbn, :descripcion, :imagen)");
+            $stament->bindParam(":autor", $autor);
+            $stament->bindParam(":titulo", $titulo);
+            $stament->bindParam(":isbn", $isbn);
+            $stament->bindParam(":descripcion", $descripcion);
+            $stament->bindParam(":imagen", $imagen);
             return ($stament->execute()) ? $this->PDO->lastInsertId() : false ;
         }
-        public function show($id){
-            $stament = $this->PDO->prepare("SELECT * FROM books where id = :id limit 1");
-            $stament->bindParam(":id",$id);
+    
+        public function show($id)
+        {
+            $stament = $this->PDO->prepare("SELECT * FROM Books_library WHERE id = :id LIMIT 1");
+            $stament->bindParam(":id", $id);
             return ($stament->execute()) ? $stament->fetch() : false ;
         }
-        public function index(){
-            $stament = $this->PDO->prepare("SELECT * FROM username");
+    
+        public function index()
+        {
+            $stament = $this->PDO->prepare("SELECT * FROM Books_library");
             return ($stament->execute()) ? $stament->fetchAll() : false;
         }
-        public function update($id,$nombre){
-            $stament = $this->PDO->prepare("UPDATE username SET nombre = :nombre WHERE id = :id");
-            $stament->bindParam(":nombre",$nombre);
-            $stament->bindParam(":id",$id);
+    
+        public function update($id, $nombre, $isbn, $titulo, $autor, $descripcion, $imagen)
+        {
+            $stament = $this->PDO->prepare("UPDATE Books_library SET Autor = :autor, Título = :titulo, ISBN = :isbn, Descripción = :descripcion, Imagen = :imagen WHERE id = :id");
+            $stament->bindParam(":autor", $autor);
+            $stament->bindParam(":titulo", $titulo);
+            $stament->bindParam(":isbn", $isbn);
+            $stament->bindParam(":descripcion", $descripcion);
+            $stament->bindParam(":imagen", $imagen);
+            $stament->bindParam(":id", $id);
             return ($stament->execute()) ? $id : false;
         }
-        public function delete($id){
-            $stament = $this->PDO->prepare("DELETE FROM username WHERE id = :id");
-            $stament->bindParam(":id",$id);
+    
+        public function delete($id)
+        {
+            $stament = $this->PDO->prepare("DELETE FROM Books_library WHERE id = :id");
+            $stament->bindParam(":id", $id);
             return ($stament->execute()) ? true : false;
         }
     }
-
-?>
