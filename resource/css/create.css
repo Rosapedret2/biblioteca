@@ -1,0 +1,64 @@
+
+
+  .form-container {
+    text-align: center;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  input, textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .form-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .btn-guardar {
+    background-color: #00ADB5;
+    color: #fff;
+    margin-right: 10px;
+  }
+  
+  .btn-cancelar {
+    background-color: #FF6745;
+    color: #fff;
+  }
+  
+  /* Estilos para ajustar el ancho del formulario en dispositivos móviles */
+  @media (max-width: 600px) {
+    .form-container {
+      width: 90%;
+    }
+  }
+  

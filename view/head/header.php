@@ -3,14 +3,25 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <title>Thrillverse library</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="resource/css/header.css">
   </head>
   <body>
-  <nav class="navbar bg bg-dark">
+    <header>
+    
+  <nav class="navbar">
+  <a class="logo" href="/biblioteca/index.php">
+      Thrillverse
+    </a>
   <div class="container-fluid">
-    <a class="navbar --bs light">ThrillVerse</a>
-      <button class="btn btn-info" type="submit">Agregar Libro</button>
+ 
+    <a href="/biblioteca/view/book/create.php">
+      <button class="header-button">Agregar Libro</button>
+      </a>
   </div>
 </nav>
+</header>
     
