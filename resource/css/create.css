@@ -1,7 +1,10 @@
+@import url('/biblioteca/resource/css/styles.css');
+@import url('/biblioteca/resource/css/header.css');
 
-
-  .form-container {
+.form-container {
     text-align: center;
+    margin: 50px auto;
+    width: 40%;
     background-color: #fff;
     border-radius: 8px;
     padding: 20px;
@@ -10,16 +13,19 @@
   
   h1 {
     margin-bottom: 20px;
+    font-size: 2rem;
+    text-align: left;
   }
   
   .form-group {
+   
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
   }
   
   label {
-    text-align: center;
+    text-align: left;
     font-weight: bold;
   }
   

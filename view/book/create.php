@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agregar nuevo libro</title>
-    <link rel="stylesheet" type="text/css" href="../resource/css/create.css">
+    <link rel="stylesheet" href="/biblioteca/resource/css/create.css">
 </head>
 
 <?php
