@@ -8,9 +8,10 @@
 </head>
 
 <?php
-    require_once("biblioteca/controller/BookController.php");
+    require_once("/controller/BookController.php");
 ?>
 
+<body>
  
   <div class="form-container">
     <h1>Agregar Libro</h1>
@@ -47,6 +48,8 @@
     </form>
   </div>
 
-<?php
-    require_once("ruta/del/proyecto/view/head/footer.php");
-?>
+  <?php
+        require_once("/Applications/MAMP/htdocs/biblioteca/view/head/footer.php");
+    ?>
+</body>
+</html>
