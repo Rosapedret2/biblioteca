@@ -12,6 +12,9 @@
 ?>
 
 <body>
+<?php
+        require_once("/Applications/MAMP/htdocs/biblioteca/view/head/header.php");
+    ?>
  
   <div class="form-container">
     <h1>Agregar Libro</h1>
