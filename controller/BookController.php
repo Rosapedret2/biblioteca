@@ -1,10 +1,10 @@
 <?php
-    class usernameController{
+    class BookController{
         private $model;
         public function __construct()
         {
-            require_once("/Applications/MAMP/proyecto/model/usernameModel.php");
-            $this->model = new usernameModel();
+            require_once("/Applications/MAMP/htdocs/biblioteca/model/BookModel.php");
+            $this->model = new BookModel();
         }
         public function guardar($nombre){
             $id = $this->model->insertar($nombre);

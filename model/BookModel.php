@@ -8,13 +8,13 @@
             $this->PDO = $con->conexion();
         }
     
-        public function insertar($nombre, $isbn, $titulo, $autor, $descripcion, $imagen)
+        public function insertar($titulo, $autor, $descripcion, $ISBN, $imagen)
         {
-            $stament = $this->PDO->prepare("INSERT INTO Books_library (Autor, Título, ISBN, Descripción, Imagen) VALUES (:autor, :titulo, :isbn, :descripcion, :imagen)");
-            $stament->bindParam(":autor", $autor);
+            $stament = $this->PDO->prepare("INSERT INTO Book (Título, Autor, Descripción, ISBN, Imagen) VALUES (:autor, :titulo, :isbn, :descripcion, :imagen)");
             $stament->bindParam(":titulo", $titulo);
-            $stament->bindParam(":isbn", $isbn);
+            $stament->bindParam(":autor", $autor);
             $stament->bindParam(":descripcion", $descripcion);
+            $stament->bindParam(":isbn", $isbn);
             $stament->bindParam(":imagen", $imagen);
             return ($stament->execute()) ? $this->PDO->lastInsertId() : false ;
         }
