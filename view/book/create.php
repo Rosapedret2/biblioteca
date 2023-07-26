@@ -7,10 +7,6 @@
     <link rel="stylesheet" href="/biblioteca/resource/css/create.css">
 </head>
 
-<?php
-    require_once("/controller/BookController.php");
-?>
-
 <body>
 <?php
         require_once("/Applications/MAMP/htdocs/biblioteca/view/head/header.php");
@@ -18,7 +14,7 @@
  
   <div class="form-container">
     <h1>Agregar Libro</h1>
-    <form action="biblioteca/controller/BookController.php" method="post" enctype="multipart/form-data">
+    <form action="store.php" method="post" autocomplete="off">
       <div class="form-group">
         <label for="titulo">Título del Libro:</label>
         <input type="text" id="titulo" name="titulo" required>
@@ -46,8 +42,8 @@
 
       <div class="form-buttons">
         <button type="submit" class="btn btn-guardar">Guardar</button>
-        <button type="button" class="btn btn-cancelar" onclick="cancelar()">Cancelar</button>
-      </div>
+        <a href="index.php"><button type="button" class="btn btn-cancelar" onclick="cancelar()">Cancelar</button>
+      </div></a>
     </form>
   </div>
 

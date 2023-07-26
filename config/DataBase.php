@@ -3,7 +3,7 @@ class dataBase {
     private $host = "localhost";
     private $dbname = "Books_library";
     private $user = "root";
-    private $password = "";
+    private $password = "root";
     public function conection(){
         try{
             $PDO = new PDO("mysql:host=".$this->host.";dbname=".$this->dbname,$this->user,$this->password);

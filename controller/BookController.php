@@ -6,22 +6,11 @@
             require_once("/Applications/MAMP/htdocs/biblioteca/model/BookModel.php");
             $this->model = new BookModel();
         }
-        public function guardar($Titulo, $Autor, $Descripcion, $ISBN, $Imagen, $id){
-            $id = $this->model->insertar($Titulo, $Autor, $Descripcion, $ISBN, $Imagen, $id);
+        public function guardar($Titulo, $Autor, $Descripcion, $ISBN, $Imagen){
+            $id = $this->model->insertar($Titulo, $Autor, $Descripcion, $ISBN, $Imagen);
             return ($id!=false) ? header("Location:show.php?id=".$id) : header("Location:create.php");
         }
-        public function show($id){
-            return ($this->model->show($id) != false) ? $this->model->show($id) : header("Location:index.php");
-        }
-        public function index(){
-            return ($this->model->index()) ? $this->model->index() : false;
-        }
-        public function update($Titulo, $Autor, $Descripcion, $ISBN, $Imagen, $id){
-            return ($this->model->update($Titulo, $Autor, $Descripcion, $ISBN, $Imagen, $id) != false) ? header("Location:show.php?id=".$id) : header("Location:index.php");
-        }
-        public function delete($id){
-            return ($this->model->delete($id)) ? header("Location:index.php") : header("Location:show.php?id=".$id) ;
-        }
+       
     }
 
 ?>

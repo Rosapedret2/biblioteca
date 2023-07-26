@@ -24,9 +24,11 @@
   }
   
   label {
+    font-size: 0.8rem;
     text-align: left;
-    font-weight: bold;
+    font-weight: 200;
     margin-bottom: 1rem;
+    color: gray;
   }
   
   input, textarea {
