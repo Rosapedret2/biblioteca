@@ -1,9 +1,11 @@
 <?php
 
-echo $_POST['titulo'];
-echo $_POST['autor'];
-echo $_POST['descripcion'];
-echo $_POST['isbn'];
-echo $_POST['imagen'];
+require_once("/Applications/MAMP/htdocs/biblioteca/controller/bookController.php");
+
+$obj = new bookController();
+$obj->guardar($_POST['titulo'], $_POST['autor'], $_POST['descripcion'], $_POST['isbn']);
+
+
 
 ?>
+

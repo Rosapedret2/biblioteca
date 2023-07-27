@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agregar nuevo libro</title>
+    <title>Agregar nuevo libro4</title>
     <link rel="stylesheet" href="/biblioteca/resource/css/create.css">
 </head>
 
@@ -14,7 +14,7 @@
  
   <div class="form-container">
     <h1>Agregar Libro</h1>
-    <form action="store.php" method="post" autocomplete="off">
+    <form action="store.php" method="POST" autocomplete="off">
       <div class="form-group">
         <label for="titulo">Título del Libro:</label>
         <input type="text" id="titulo" name="titulo" required>
@@ -30,15 +30,15 @@
         <textarea id="descripcion" name="descripcion" required></textarea>
       </div>
 
-      <div class="form-group">
+    <div class="form-group">
         <label for="isbn">ISBN:</label>
         <input type="text" id="isbn" name="isbn" required>
-      </div>
+      </div> 
 
-      <div class="form-group">
+     <!-- <div class="form-group">
         <label for="imagen">Imagen (max 60 KB):</label>
         <input type="file" id="imagen" name="imagen" accept=".jpg, .jpeg, .png" required>
-      </div>
+      </div>  -->
 
       <div class="form-buttons">
         <button type="submit" class="btn btn-guardar">Guardar</button>

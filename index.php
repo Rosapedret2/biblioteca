@@ -1,3 +1,4 @@
+
 <!doctype html>
     <html lang="en">
     <head>
@@ -24,7 +25,10 @@
     </div>
 
     <?php
+   
         require_once("/Applications/MAMP/htdocs/biblioteca/view/head/footer.php");
     ?>
-
+ <?php
+include_once ("/Applications/MAMP/htdocs/biblioteca/config/config.php");
+?>
     </body>
