@@ -8,7 +8,7 @@
         }
         public function guardar($titulo, $autor, $descripcion, $isbn) {
             $id = $this->model->insertar($titulo, $autor, $descripcion, $isbn);
-            return ($id!=false) ? header("Location:show.php?id=".$id) : header("Location:new.php");
+            return ($id!=false) ? header("Location:show.php?id=".$id) : header("Location:create.php");
         }
 
         public function getbooks(){

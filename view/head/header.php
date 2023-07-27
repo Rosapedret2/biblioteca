@@ -18,7 +18,7 @@
     </a>
   <div class="container-fluid">
  
-    <a href="/biblioteca/view/book/new.php">
+    <a href="/biblioteca/view/book/create.php">
       <button class="header-button">Agregar Libro</button>
       </a>
   </div>
