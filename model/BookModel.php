@@ -23,6 +23,11 @@ public function getbooks(){
     $stament = $this->PDO->prepare("SELECT * FROM Books_library.books");
     return ($stament->execute())?$stament->fetchAll() : false;
 }
+public function show($id){
+    $stament = $this->PDO->prepare("SELECT * FROM Books_library.books where id = :id limit 1");
+    $stament->bindParam(":id",$id);
+    return ($stament->execute()) ? $stament->fetch() : false ;
+}
 
     }
 

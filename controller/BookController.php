@@ -16,7 +16,10 @@
         public function getbooks(){
             return($this->model->getbooks())?$this->model->getbooks() : false;
         }
-       
+
+        public function show($id){
+            return ($this->model->show($id) != false) ? $this->model->show($id) : header("Location:show.php");
+       }
     }
 
     // $cualquiera = new bookController();
