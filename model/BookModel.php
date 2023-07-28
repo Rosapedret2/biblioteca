@@ -10,7 +10,7 @@
     
         public function insertar ($titulo, $autor, $descripcion, $isbn)
         {
-            $stament = $this->PDO->prepare("INSERT INTO Books_library.books VALUES (null, :Titulo, :Autor, :Descripcion, :ISBN)");
+            $stament = $this->PDO->prepare("INSERT INTO Books_library.books VALUES (:Titulo, :Autor, :Descripcion, :ISBN, null)");
             $stament->bindParam(":Titulo", $titulo);
             $stament->bindParam(":Autor", $autor);
             $stament->bindParam(":Descripcion", $descripcion);

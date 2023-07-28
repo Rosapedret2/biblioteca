@@ -9,6 +9,7 @@ class dataBase {
     private $dbname = "Books_library";
     private $user = "root";
     private $password = "root";
+    // private $password = ""; XAMP
 
     public function conexion() {
         try {

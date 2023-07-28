@@ -3,8 +3,10 @@
         private $model;
         public function __construct()
         {
-            require_once("/Applications/MAMP/htdocs/biblioteca/model/bookModel.php");
+            require_once("/Applications/MAMP/htdocs/biblioteca/model/BookModel.php");
             $this->model = new bookModel();
+
+        
         }
         public function guardar($titulo, $autor, $descripcion, $isbn) {
             $id = $this->model->insertar($titulo, $autor, $descripcion, $isbn);
@@ -17,7 +19,7 @@
        
     }
 
-    $cualquiera = new bookController();
-    var_dump($cualquiera->guardar("dasndkjjasck", "gigi", "monica", "234234234"));
+    // $cualquiera = new bookController();
+    // var_dump($cualquiera->getbooks());
 
 ?>

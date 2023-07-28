@@ -14,7 +14,7 @@
  
   <div class="form-container">
     <h1>Agregar Libro</h1>
-    <form action="store.php" method="POST" autocomplete="off">
+    <form action="store.php" method="POST">
       <div class="form-group">
         <label for="titulo">Título del Libro:</label>
         <input type="text" id="titulo" name="titulo" required>
